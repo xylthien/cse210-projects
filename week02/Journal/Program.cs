@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Enumeration;
 
+// Enhancement: I added a functionallity to the random prompt generation so 
+// that it won't pull the same prompt twince in a row, assuming that
+// the user doesn't close the prgram in between entries.
+
 class Program
 {
     static void Main(string[] args)
@@ -51,7 +55,7 @@ class Program
                         savedPrompt = randomPrompt;
                     }
                 }
-                
+
                 string prompt = prompts[randomPrompt];
 
                 Console.WriteLine(prompt);
@@ -79,7 +83,7 @@ class Program
                         Console.WriteLine();
                     }
                 }
-                
+
             }
             else if (userChoice == "3")
             {
@@ -124,6 +128,6 @@ class Program
                 Console.WriteLine("User has selected an option that does not exist!");
             }
         }
-        
+
     }
 }
