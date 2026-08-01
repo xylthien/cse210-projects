@@ -96,13 +96,18 @@ class Program
             "Would love to see a guide about base optimization."
         ));
 
+        videos.Add(video1);
+        videos.Add(video2);
+        videos.Add(video3);
+        videos.Add(video4);
+
         foreach (Video video in videos)
         {
             Console.WriteLine("--------------------");
             Console.WriteLine($"Title: {video._title}");
             Console.WriteLine($"Author: {video._author}");
             Console.WriteLine($"Length: {video._secLength} seconds");
-            Console.WriteLine($"Comment Count: {video.GetNumberOfComments}");
+            Console.WriteLine($"Comment Count: {video.GetNumberOfComments()}");
             Console.WriteLine();
 
             Console.WriteLine("Comments:");
